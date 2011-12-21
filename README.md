@@ -86,7 +86,9 @@ would optimize that PNG file and ouput something similar to this one:
 
 * Optimizing JPEG and getting feedback
 
+    ```
     Piet.optimize('/my/wonderful/pics/pony.jpg', :verbose => true)
+    ```
 
 would optimize that JPEG file and ouput similar to this one:
 
