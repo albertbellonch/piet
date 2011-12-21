@@ -7,7 +7,7 @@ Description
 Piet is a gem that optimizes an image stored in a file, and it has
 integration with CarrierWave uploaders.
 
-This gem is named after the minimal Dutch painter Piet Mondrian.
+This gem is named after the minimal Dutch painter [Piet Mondrian](http://en.wikipedia.org/wiki/Piet_Mondrian).
 
 [![Build Status](https://secure.travis-ci.org/albertbellonch/piet.png)](http://travis-ci.org/albertbellonch/piet)
 
@@ -53,15 +53,19 @@ Examples
 
 * Simply Optimizing
 
+    ```
     Piet.optimize('/my/wonderful/pics/piggy.png')
 
     Piet.optimize('/my/wonderful/pics/pony.jpg')
+    ```
 
 would optimize those PNG and JPEG files but ouput nothing.
 
 * Optimizing PNG and getting feedback
 
+    ```
     Piet.optimize('/my/wonderful/pics/piggy.png', :verbose => true)
+    ```
 
 would optimize that PNG file and ouput something similar to this one:
 
