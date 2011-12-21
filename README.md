@@ -44,7 +44,38 @@ CarrierWave integration
 -----------------------
 
 As stated before, Piet can be integrated into CarrierWave uploaders.
-This way, you can optimize the original image or a version
+This way, you can optimize the original image or a version.
+
+In order to do that, firstly add **piet** to your Gemfile:
+
+    gem 'piet'
+
+Then go to your CarrierWave uploader and include Piet's extension:
+
+    class ImageUploader < CarrierWave::Uploader::Base
+      ...
+      include Piet::CarrierWaveExtension
+      ...
+    end
+
+And finally use Piet! For all the images:
+
+    class ImageUploader < CarrierWave::Uploader::Base
+      ...
+      process :optimize
+      ...
+    end
+
+Or only for a version:
+
+    class ImageUploader < CarrierWave::Uploader::Base
+      ...
+      version :normal do
+        ...
+        process :optimize
+      end
+      ...
+    end
 
 Examples
 --------
