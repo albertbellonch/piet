@@ -7,9 +7,7 @@ Description
 Piet is a gem that optimizes an image stored in a file, and it has
 integration with CarrierWave uploaders.
 
-This gem is named after the minimal Dutch painter [Piet Mondrian](http://en.wikipedia.org/wiki/Piet_Mondrian).
-
-[![Build Status](https://secure.travis-ci.org/albertbellonch/piet.png)](http://travis-ci.org/albertbellonch/piet)
+This gem is named after the minimalist Dutch painter [Piet Mondrian](http://en.wikipedia.org/wiki/Piet_Mondrian).
 
 Installation
 ------------
