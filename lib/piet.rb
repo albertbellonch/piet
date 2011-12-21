@@ -1,0 +1,1 @@
+require "piet/version"
