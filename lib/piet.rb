@@ -46,10 +46,11 @@ module Piet
            else
              ""
            end
-      `pngquant #{vo} 256 #{path}`
+      out = `pngquant #{vo} 256 #{path}`
       blobs = path.split(".")
       new_path = "#{blobs[0..-2].join(".")}-fs8.#{blobs[-1]}"
       `mv #{new_path} #{path}`
+      out
     end
   end
 end
