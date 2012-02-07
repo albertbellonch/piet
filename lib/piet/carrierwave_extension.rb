@@ -6,5 +6,12 @@ module Piet
         img
       end
     end
+
+    def pngquant
+      manipulate! do |img|
+        Piet.pngquant(img.path)
+        img
+      end
+    end
   end
 end
