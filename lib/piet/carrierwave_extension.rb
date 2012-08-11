@@ -2,14 +2,14 @@ module Piet
   module CarrierWaveExtension
     def optimize
       manipulate! do |img|
-        Piet.optimize(img.path)
+        Piet.optimize(img.class.to_s == "Magick::Image" ? img.base_filename : img.path)
         img
       end
     end
 
     def pngquant
       manipulate! do |img|
-        Piet.pngquant(img.path)
+        Piet.pngquant(img.class.to_s == "Magick::Image" ? img.base_filename : img.path)
         img
       end
     end
