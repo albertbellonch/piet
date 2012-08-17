@@ -58,7 +58,7 @@ Then go to your CarrierWave uploader and include Piet's extension:
       ...
     end
 
-And finally use Piet! For all the images:
+And finally use Piet! For the main version:
 
     class ImageUploader < CarrierWave::Uploader::Base
       ...
@@ -66,7 +66,7 @@ And finally use Piet! For all the images:
       ...
     end
 
-Or only for a version:
+And for each of the other versions:
 
     class ImageUploader < CarrierWave::Uploader::Base
       ...
