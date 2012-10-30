@@ -129,3 +129,8 @@ TODO
 * Support for GIFs
 * Binary tool for optimizing a file
 * Add some testing!
+
+Changelog
+---------
+
+* v.0.1.0 Optimization of PNGs and JPEGs, including an integration with Carrierwave
