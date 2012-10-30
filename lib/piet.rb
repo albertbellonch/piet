@@ -2,7 +2,7 @@ require 'piet/carrierwave_extension'
 
 module Piet
   class << self
-    VALID_EXTS = %w{ png jpg jpeg }
+    VALID_EXTS = %w{ png gif jpg jpeg }
 
     def optimize(path, opts={})
       output = optimize_for(path, opts)
@@ -20,7 +20,7 @@ module Piet
 
     def optimize_for(path, opts)
       case extension(path)
-        when "png" then optimize_png(path, opts)
+        when "png", "gif" then optimize_png(path, opts)
         when "jpg", "jpeg" then optimize_jpg(path, opts)
       end
     end
