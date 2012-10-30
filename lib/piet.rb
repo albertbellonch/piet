@@ -4,7 +4,7 @@ module Piet
   class << self
     VALID_EXTS = %w{ png gif jpg jpeg }
 
-    def optimize(path, opts={})
+    def optimize(path, opts= {} )
       output = optimize_for(path, opts)
       puts output if opts[:verbose]
       true
