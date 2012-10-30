@@ -88,15 +88,15 @@ Examples
     Piet.optimize('/my/wonderful/pics/pony.jpg')
     ```
 
-would optimize those PNG and JPEG files but ouput nothing.
+would optimize those PNG, GIF and JPEG files but ouput nothing.
 
-* Optimizing PNG and getting feedback
+* Optimizing PNG/GIF and getting feedback
 
     ```
     Piet.optimize('/my/wonderful/pics/piggy.png', :verbose => true)
     ```
 
-would optimize that PNG file and ouput something similar to this one:
+would optimize that PNG/GIF file and ouput something similar to this one:
 
     ** Processing: piggy.png
     340x340 pixels, 4x8 bits/pixel, RGB+alpha
@@ -126,7 +126,6 @@ would optimize that JPEG file and ouput similar to this one:
 TODO
 ----
 
-* Support for GIFs
 * Binary tool for optimizing a file
 * Add some testing!
 
@@ -134,3 +133,4 @@ Changelog
 ---------
 
 * v.0.1.0 Optimization of PNGs and JPEGs, including an integration with Carrierwave
+* v.0.1.1 Added support for GIFs. Added an extra option to use pngquant (thanks @rogercampos). Solved problems with Carrierwave >= 0.6 (thanks @mllocs and @huacnlee).
