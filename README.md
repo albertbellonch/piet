@@ -29,11 +29,15 @@ Usage
 
 You simply require the gem
 
-    require 'piet'
+```ruby
+require 'piet'
+```
 
 and then call the **optimize** method:
 
-    Piet.optimize(path, opts)
+```ruby
+Piet.optimize(path, opts)
+```
 
 The options are:
 
@@ -48,53 +52,61 @@ This way, you can optimize the original image or a version.
 
 In order to do that, firstly add **piet** to your Gemfile:
 
-    gem 'piet'
+```ruby
+gem 'piet'
+```
 
 Then go to your CarrierWave uploader and include Piet's extension:
 
-    class ImageUploader < CarrierWave::Uploader::Base
-      ...
-      include Piet::CarrierWaveExtension
-      ...
-    end
+```ruby
+class ImageUploader < CarrierWave::Uploader::Base
+  ...
+  include Piet::CarrierWaveExtension
+  ...
+end
+```
 
 And finally use Piet! For all the images:
 
-    class ImageUploader < CarrierWave::Uploader::Base
-      ...
-      process :optimize
-      ...
-    end
+```ruby
+class ImageUploader < CarrierWave::Uploader::Base
+  ...
+  process :optimize
+  ...
+end
+```
 
 Or only for a version:
 
-    class ImageUploader < CarrierWave::Uploader::Base
-      ...
-      version :normal do
-        ...
-        process :optimize
-      end
-      ...
-    end
+```ruby
+class ImageUploader < CarrierWave::Uploader::Base
+  ...
+  version :normal do
+    ...
+    process :optimize
+  end
+  ...
+end
+```
 
 Examples
 --------
 
 * Simply Optimizing
 
-    ```
-    Piet.optimize('/my/wonderful/pics/piggy.png')
+```ruby
+Piet.optimize('/my/wonderful/pics/piggy.png')
 
-    Piet.optimize('/my/wonderful/pics/pony.jpg')
-    ```
+Piet.optimize('/my/wonderful/pics/pony.jpg')
+```
 
 would optimize those PNG, GIF and JPEG files but ouput nothing.
 
 * Optimizing PNG/GIF and getting feedback
 
-    ```
-    Piet.optimize('/my/wonderful/pics/piggy.png', :verbose => true)
-    ```
+```ruby
+Piet.optimize('/my/wonderful/pics/piggy.png', :verbose => true)
+```
 
 would optimize that PNG/GIF file and ouput something similar to this one:
 
@@ -104,20 +116,20 @@ would optimize that PNG/GIF file and ouput something similar to this one:
     Input file size = 157426 bytes
 
     Trying:
-      zc = 9  zm = 9  zs = 0  f = 1		IDAT size = 156966
-      zc = 9  zm = 8  zs = 0  f = 1		IDAT size = 156932
+      zc = 9  zm = 9  zs = 0  f = 1   IDAT size = 156966
+      zc = 9  zm = 8  zs = 0  f = 1   IDAT size = 156932
 
     Selecting parameters:
-      zc = 9  zm = 8  zs = 0  f = 1		IDAT size = 156932
+      zc = 9  zm = 8  zs = 0  f = 1   IDAT size = 156932
 
     Output IDAT size = 156932 bytes (437 bytes decrease)
     Output file size = 156989 bytes (437 bytes = 0.28% decrease)
 
 * Optimizing JPEG and getting feedback
 
-    ```
-    Piet.optimize('/my/wonderful/pics/pony.jpg', :verbose => true)
-    ```
+```ruby
+Piet.optimize('/my/wonderful/pics/pony.jpg', :verbose => true)
+```
 
 would optimize that JPEG file and ouput similar to this one:
 
