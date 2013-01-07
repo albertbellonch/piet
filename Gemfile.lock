@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    piet (0.1.1)
+    piet (0.1.2)
 
 GEM
   remote: http://rubygems.org/
