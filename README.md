@@ -146,3 +146,4 @@ Changelog
 
 * v.0.1.0 Optimization of PNGs and JPEGs, including an integration with Carrierwave
 * v.0.1.1 Added support for GIFs. Added an extra option to use pngquant (thanks @rogercampos). Solved problems with Carrierwave >= 0.6 (thanks @mllocs and @huacnlee).
+* v.0.1.2 Fixed some problems with missing processing, thanks to @lentg.
