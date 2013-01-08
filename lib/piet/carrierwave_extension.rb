@@ -7,9 +7,8 @@ module Piet
           Piet.optimize(current_path)
           img_new = ::Magick::Image.read(current_path).first # reopen the img and return
         elsif img.class.to_s == "MiniMagick::Image"
-          img.write(img.path)
-          Piet.optimize(img.path)
-          img_new = ::MiniMagick::Image.open(img.path).first # reopen the img and return
+          Piet.optimize(img.path)          
+          img_new = img
         else
           Piet.optimize(img.path)
           img_new = img
@@ -25,9 +24,8 @@ module Piet
           Piet.pngquant(current_path)
           img_new = ::Magick::Image.read(current_path).first # reopen the img and return
         elsif img.class.to_s == "MiniMagick::Image"
-          img.write(img.path)
-          Piet.pngquant(img.path)
-          img_new = ::MiniMagick::Image.open(img.path).first # reopen the img and return
+          Piet.pngquant(img.path)          
+          img_new = img
         else
           Piet.pngquant(img.path)
           img_new = img
