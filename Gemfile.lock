@@ -2,12 +2,14 @@ PATH
   remote: .
   specs:
     piet (0.1.2)
+      png_quantizator
 
 GEM
   remote: http://rubygems.org/
   specs:
     ZenTest (4.5.0)
     diff-lcs (1.1.3)
+    png_quantizator (0.1.0)
     rspec (2.7.0)
       rspec-core (~> 2.7.0)
       rspec-expectations (~> 2.7.0)
