@@ -146,7 +146,7 @@ Piet.pngquant('/a/path/where/you/store/the/file/to/convert')
 
 Please note **you have to install the binary** in order to use the tool. Simply follow the instructions (and read more info about it) in [the official site](http://pngquant.org/).
 
-Thanks to @rogercampos for providing the awesome **png_quantizator** gem, which you can find [here](https://github.com/rogercampos/png_quantizator).
+Thanks to [@rogercampos](http://github.com/rogercampos) for providing the awesome **png_quantizator** gem, which you can find [here](https://github.com/rogercampos/png_quantizator).
 
 TODO
 ----
