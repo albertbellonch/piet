@@ -33,8 +33,9 @@ module Piet
     end
 
     def optimize_jpg(path, opts)
+      quality = opts[:quality].nil? ? 100 : opts[:quality]
       vo = opts[:verbose] ? "-v" : "-q"
-      `jpegoptim -f -m85 --strip-all #{vo} #{path}`
+      `jpegoptim -f -m#{quality} --strip-all #{vo} #{path}`
     end
   end
 end
