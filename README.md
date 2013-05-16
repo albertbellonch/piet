@@ -43,6 +43,8 @@ The options are:
 
 * **verbose**: Whether you want to get the output of the command or not. It is interpreted as a Boolean value. Default: false.
 
+* **quality**: If you wanna add a compression, adjust the quality parameter. Valid values are any integer between 0 and 100 (100 means no compression and highest quality). Default: 100
+
 
 CarrierWave integration
 -----------------------
