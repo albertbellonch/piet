@@ -30,14 +30,18 @@ module Piet
     def optimize_png(path, opts)
       vo = opts[:verbose] ? "-v" : "-quiet"
       path.gsub!(/([\(\)\[\]\{\}\*\?\\])/, '\\\\\1')
-      `optipng -o7 #{opts[:command_options]} #{vo} #{path}`
+      `#{command_path("optipng")} -o7 #{opts[:command_options]} #{vo} #{path}`
     end
 
     def optimize_jpg(path, opts)
       quality = (0..100).include?(opts[:quality]) ? opts[:quality] : 100
       vo = opts[:verbose] ? "-v" : "-q"
       path.gsub!(/([\(\)\[\]\{\}\*\?\\])/, '\\\\\1')
-      `jpegoptim -f -m#{quality} --strip-all #{opts[:command_options]} #{vo} #{path}`
+      `#{command_path("jpegoptim")} -f -m#{quality} --strip-all #{opts[:command_options]} #{vo} #{path}`
+    end
+
+    def command_path(command)
+      command
     end
 
   end
