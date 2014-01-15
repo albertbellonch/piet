@@ -1,3 +1,4 @@
+require 'png_quantizator'
 require 'piet/carrierwave_extension'
 
 module Piet
