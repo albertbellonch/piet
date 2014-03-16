@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.homepage    = "http://itnig.net"
   s.summary     = %q{An image optimizer}
   s.description = %q{-}
+  s.license     = 'MIT'
 
   s.rubyforge_project = "piet"
 
