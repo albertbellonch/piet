@@ -4,7 +4,7 @@ module Piet
   class << self
     VALID_EXTS = %w{ png gif jpg jpeg }
 
-    def optimize(path, opts= {} )
+    def optimize(path, opts={})
       output = optimize_for(path, opts)
       puts output if opts[:verbose]
       true
@@ -29,13 +29,19 @@ module Piet
 
     def optimize_png(path, opts)
       vo = opts[:verbose] ? "-v" : "-quiet"
-      `optipng -o7 #{vo} #{path}`
+      path.gsub!(/([\(\)\[\]\{\}\*\?\\])/, '\\\\\1')
+      `#{command_path("optipng")} -o7 #{opts[:command_options]} #{vo} #{path}`
     end
 
     def optimize_jpg(path, opts)
       quality = (0..100).include?(opts[:quality]) ? opts[:quality] : 100
       vo = opts[:verbose] ? "-v" : "-q"
-      `jpegoptim -f -m#{quality} --strip-all #{vo} #{path}`
+      path.gsub!(/([\(\)\[\]\{\}\*\?\\])/, '\\\\\1')
+      `#{command_path("jpegoptim")} -f -m#{quality} --strip-all #{opts[:command_options]} #{vo} #{path}`
+    end
+
+    def command_path(command)
+      command
     end
 
   end

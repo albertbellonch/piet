@@ -24,6 +24,29 @@ After installing both utils, simply install the gem:
 
     gem install piet
 
+
+Easy installation of binaries
+------------------------------
+
+While install binaries (like optipng, jpegoptim) is not a rocket science, it can be hard (or even impossible) for some people. Thinking on this a gem called [piet-binary](https://github.com/loureirorg/piet-binary) was created with theses binaries packed.
+This is a good approach if you are using Heroku as your host provider, or if you are lazy or impatient ;)
+
+After install piet, just install piet-binary and add to your Gemfile (if you are using Rails):
+```bash
+gem install piet-binary
+```
+
+And in your Gemfile
+```ruby
+gem 'piet'
+gem 'piet-binary'
+```
+
+*PS 1: it's optional to call piet in your Gemfile, because piet-binary already do this. The same is valid to install the gem via command-line: just install the piet-gem and it will install the piet for you.*
+
+*PS 2: don't forget to call 'bundle install' if you are using Rails*
+
+
 Usage
 -----
 
