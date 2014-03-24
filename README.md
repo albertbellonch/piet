@@ -182,8 +182,8 @@ TODO
 Changelog
 ---------
 
-* v.0.1.0 Optimization of PNGs and JPEGs, including an integration with Carrierwave
-* v.0.1.1 Added support for GIFs. Added an extra option to use pngquant (thanks @rogercampos). Solved problems with Carrierwave >= 0.6 (thanks @mllocs and @huacnlee).
-* v.0.1.2 Fixed some problems with missing processing, thanks to @lentg.
-* v.0.1.3 Use png_quantizator gem instead of the own implementation.
 * v.0.2.0 Users of the gem can now use piet-binary gem, and bug with filenames containing spaces, parentheses and some other characters is solved too, thanks to @loureirorg. Requiring png_quantizator when it's due, thanks to @jayzes. Finally, specifying the gem version due to @jigfox interest.
+* v.0.1.3 Use png_quantizator gem instead of the own implementation.
+* v.0.1.2 Fixed some problems with missing processing, thanks to @lentg.
+* v.0.1.1 Added support for GIFs. Added an extra option to use pngquant (thanks @rogercampos). Solved problems with Carrierwave >= 0.6 (thanks @mllocs and @huacnlee).
+* v.0.1.0 Optimization of PNGs and JPEGs, including an integration with Carrierwave
