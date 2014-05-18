@@ -2,7 +2,7 @@ module Piet
   module CarrierWaveExtension
     def optimize(opts={})
       manipulate! do |img|
-        Piet.optimize(img.path, opts)
+        Piet.optimize(current_path, opts)
         img
       end
     end

@@ -1,1 +1,8 @@
 pkg/*
+
+# Carrierwave uploads
+uploads
+
+# RVM configuration files
+.ruby-gemset
+.ruby-version

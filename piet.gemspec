@@ -21,4 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency "png_quantizator"
   s.add_development_dependency "rspec"
   s.add_development_dependency "ZenTest"
+  s.add_development_dependency "carrierwave"
+  s.add_development_dependency "mini_magick"
+  s.add_development_dependency "rmagick"
 end

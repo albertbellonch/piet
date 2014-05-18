@@ -1,1 +1,2 @@
 require 'piet'
+require 'carrierwave'
