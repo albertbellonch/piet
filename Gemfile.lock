@@ -31,6 +31,7 @@ GEM
       subexec (~> 0.2.1)
     minitest (5.3.3)
     png_quantizator (0.1.0)
+    rake (10.3.2)
     rmagick (2.13.2)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
@@ -53,5 +54,6 @@ DEPENDENCIES
   carrierwave
   mini_magick
   piet!
+  rake
   rmagick
   rspec
