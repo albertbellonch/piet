@@ -1,6 +1,8 @@
 Piet
 ======
 
+[![Build Status](https://secure.travis-ci.org/albertbellonch/piet.png)](http://travis-ci.org/albertbellonch/piet)
+
 Description
 -----------
 
