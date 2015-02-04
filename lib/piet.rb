@@ -3,8 +3,6 @@ require 'piet/carrierwave_extension'
 
 module Piet
   class << self
-    VALID_EXTS = %w{ png gif jpg jpeg }
-
     def optimize(path, opts={})
       output = optimize_for(path, opts)
       puts output if opts[:verbose]
@@ -18,14 +16,14 @@ module Piet
     private
 
     def optimize_for(path, opts)
-      case extension(path)
+      case mimetype(path)
         when "png", "gif" then optimize_png(path, opts)
-        when "jpg", "jpeg" then optimize_jpg(path, opts)
+        when "jpeg" then optimize_jpg(path, opts)
       end
     end
 
-    def extension(path)
-      path.split(".").last.downcase
+    def mimetype(path)
+      IO.popen(['file', '--brief', '--mime-type', path], in: :close, err: :close).read.chomp.sub(/image\//, '')
     end
 
     def optimize_png(path, opts)
