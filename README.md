@@ -64,6 +64,9 @@ and then call the **optimize** method:
 Piet.optimize(path, opts)
 ```
 
+Not that this will work not by just using the file extension, but by
+MIME type detection, which should be more reliable.
+
 The options are:
 
 * **verbose**: Whether you want to get the output of the command or not. It is interpreted as a Boolean value. Default: false.
@@ -185,6 +188,8 @@ TODO
 Changelog
 ---------
 
+* v.0.2.1 More reliable file type detection, by not using the extension but the MIME type. Thanks to @jewlofthelotus! Also, the Carrierwave
+extension is now compatible with RMagick thanks to @YoranBrondsema.
 * v.0.2.0 Users of the gem can now use piet-binary gem, and bug with filenames containing spaces, parentheses and some other characters is solved too, thanks to @loureirorg. Requiring png_quantizator when it's due, thanks to @jayzes. Finally, specifying the gem version due to @jigfox interest.
 * v.0.1.3 Use png_quantizator gem instead of the own implementation.
 * v.0.1.2 Fixed some problems with missing processing, thanks to @lentg.
