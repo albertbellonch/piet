@@ -182,6 +182,8 @@ Thanks to [@rogercampos](http://github.com/rogercampos) for providing the awesom
 TODO
 ----
 
+* Add SVG optimization
+* Leave testing files out of the bundled gem
 * Binary tool for optimizing a file
 * Add some testing!
 
