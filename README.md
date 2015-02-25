@@ -190,6 +190,7 @@ TODO
 Changelog
 ---------
 
+* v.0.2.2 Lighter gem weight (to be improved in the future).
 * v.0.2.1 More reliable file type detection, by not using the extension but the MIME type. Thanks to @jewlofthelotus! Also, the Carrierwave
 extension is now compatible with RMagick thanks to @YoranBrondsema.
 * v.0.2.0 Users of the gem can now use piet-binary gem, and bug with filenames containing spaces, parentheses and some other characters is solved too, thanks to @loureirorg. Requiring png_quantizator when it's due, thanks to @jayzes. Finally, specifying the gem version due to @jigfox interest.
