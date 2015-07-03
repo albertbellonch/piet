@@ -34,9 +34,27 @@ module Piet
     end
 
     def optimize_jpg(path, opts)
+      path.gsub!(/([\(\)\[\]\{\}\*\?\\])/, '\\\\\1')
+      if mozjpeg_available?
+        mozjpeg(path, opts)
+      else
+        jpegoptim(path, opts)
+      end
+    end
+
+    def mozjpeg_available?
+      !`which mozjpeg`.empty?
+    end
+
+    def mozjpeg(path, opts)
+      tmp_path = path.split('.').insert(-2, 'original').join('.')
+      `mv #{path} #{tmp_path}`
+      `mozjpeg -outfile #{path} #{tmp_path}`
+    end
+
+    def jpegoptim(path, opts)
       quality = (0..100).include?(opts[:quality]) ? opts[:quality] : 100
       vo = opts[:verbose] ? "-v" : "-q"
-      path.gsub!(/([\(\)\[\]\{\}\*\?\\])/, '\\\\\1')
       `#{command_path("jpegoptim")} -f -m#{quality} --strip-all #{opts[:command_options]} #{vo} #{path}`
     end
 
