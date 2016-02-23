@@ -190,6 +190,7 @@ TODO
 Changelog
 ---------
 
+* v.0.2.4 Fixed Gemfile issues!
 * v.0.2.3 More efficient treatment of open files thanks to @lavrovdv.
 * v.0.2.2 Lighter gem weight (to be improved in the future).
 * v.0.2.1 More reliable file type detection, by not using the extension but the MIME type. Thanks to @jewlofthelotus! Also, the Carrierwave

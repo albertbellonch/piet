@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    piet (0.2.2)
+    piet (0.2.4)
       png_quantizator
 
 GEM
@@ -30,7 +30,7 @@ GEM
     mini_magick (3.7.0)
       subexec (~> 0.2.1)
     minitest (5.3.3)
-    png_quantizator (0.1.1)
+    png_quantizator (0.2.1)
     rake (10.3.2)
     rmagick (2.13.2)
     rspec (2.14.1)
@@ -57,3 +57,6 @@ DEPENDENCIES
   rake
   rmagick
   rspec
+
+BUNDLED WITH
+   1.10.6
