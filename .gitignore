@@ -6,3 +6,7 @@ uploads
 # RVM configuration files
 .ruby-gemset
 .ruby-version
+
+# RubyMine project files
+# https://www.jetbrains.com/ruby/help/project.html
+.idea/*
