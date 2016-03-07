@@ -120,6 +120,22 @@ class ImageUploader < CarrierWave::Uploader::Base
 end
 ```
 
+To use custom options in the optimization:
+
+```ruby
+class ImageUploader < CarrierWave::Uploader::Base
+  ...
+  # To pass 1 hash as 1 argument
+  # It needs to be put in an array
+  # So in this example the actual call will look like:
+  # ```
+  # optimize({quality: 90, level: 7})
+  # ```
+  process optimize: [{quality: 90, level: 7}]
+  ...
+end
+```
+
 Examples
 --------
 
