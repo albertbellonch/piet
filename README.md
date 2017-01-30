@@ -206,6 +206,7 @@ TODO
 Changelog
 ---------
 
+* v.0.2.5 Improved CI coverage & dropped support for Ruby 1.9
 * v.0.2.4 Fixed Gemfile issues!
 * v.0.2.3 More efficient treatment of open files thanks to @lavrovdv.
 * v.0.2.2 Lighter gem weight (to be improved in the future).
