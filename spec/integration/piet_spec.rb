@@ -11,6 +11,21 @@ class MiniMagickUploader < CarrierWave::Uploader::Base
 end
 
 describe Piet do
+  # describe Piet::Configuration do
+  #   before do
+  #     Piet.configure do |config|
+  #       config.drawing_count = 10
+  #     end
+  #   end
+
+  #   it "returns an array with 10 elements" do
+  #     draw = Piet::Drawing.new.draw
+
+  #     expect(draw).to be_a(Array)
+  #     expect(draw.size).to eq(10)
+  #   end
+  # end
+
   describe Piet::CarrierWaveExtension do
     describe ".optimize" do
       let(:real_jpg_path) { File.join('spec', 'assets', 'jpg-real.jpg') }
