@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     piet (0.2.5)
+      mozjpeg
       png_quantizator
 
 GEM
@@ -27,6 +28,9 @@ GEM
     mime-types-data (3.2016.0521)
     mini_magick (4.6.0)
     minitest (5.10.1)
+    mozjpeg (0.0.2)
+      os (~> 0.9.6)
+    os (0.9.6)
     png_quantizator (0.2.1)
     rake (12.0.0)
     rmagick (2.16.0)

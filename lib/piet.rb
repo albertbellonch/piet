@@ -1,5 +1,6 @@
 require 'png_quantizator'
 require 'piet/carrierwave_extension'
+require 'mozjpeg'
 
 module Piet
   class << self
@@ -11,6 +12,10 @@ module Piet
 
     def pngquant(path)
       PngQuantizator::Image.new(path).quantize!
+    end
+
+    def mozjpeg(path, opts={})
+      optimize_mozjpeg(path, opts)
     end
 
     private
@@ -38,6 +43,16 @@ module Piet
       vo = opts[:verbose] ? "-v" : "-q"
       path.gsub!(/([\(\)\[\]\{\}\*\?\\])/, '\\\\\1')
       `#{command_path("jpegoptim")} -f -m#{quality} --strip-all #{opts[:command_options]} #{vo} #{path}`
+    end
+
+    def optimize_mozjpeg(path, opts)
+      quality = (0..100).include?(opts[:quality]) ? opts[:quality] : 100
+      path.gsub!(/([\(\)\[\]\{\}\*\?\\])/, '\\\\\1')
+      file = File.new(path)
+      temp_file = File.new("temp_#{path}", 'w')
+      FileUtils.copy_file(file.path, temp_file.path)
+      Mozjpeg.compress temp_file, file, arguments: "-quality #{quality} #{opts[:command_options]}"
+      File.delete(temp_file)
     end
 
     def command_path(command)

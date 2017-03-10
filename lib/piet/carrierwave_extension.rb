@@ -7,5 +7,9 @@ module Piet
     def pngquant
       ::Piet.pngquant(current_path)
     end
+
+    def mozjpeg
+      ::Piet.mozjpeg(current_path, opts)
+    end
   end
 end
