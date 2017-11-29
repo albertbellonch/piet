@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    piet (0.2.5)
+    piet (0.2.6)
       png_quantizator
 
 GEM
