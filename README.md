@@ -147,7 +147,7 @@ Piet.optimize('/my/wonderful/pics/piggy.png')
 Piet.optimize('/my/wonderful/pics/pony.jpg')
 ```
 
-would optimize those PNG, GIF and JPEG files but ouput nothing.
+would optimize those PNG, GIF and JPEG files but output nothing.
 
 * Optimizing PNG/GIF and getting feedback
 
