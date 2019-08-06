@@ -195,6 +195,22 @@ Please note **you have to install the binary** in order to use the tool. Simply 
 
 Thanks to [@rogercampos](http://github.com/rogercampos) for providing the awesome **png_quantizator** gem, which you can find [here](https://github.com/rogercampos/png_quantizator).
 
+Mozjpeg
+-------
+This fork adds simple detection and usage of mozjpeg for JPG compression. If the mozjpeg command is available that one will be used instead of jpegoptim.
+
+How to setup mozjpeg on Ubuntu:
+```
+sudo apt-get install autoconf automake libtool nasm make pkg-config
+git clone https://github.com/mozilla/mozjpeg.git && cd mozjpeg
+autoreconf -fiv
+./configure
+make deb
+sudo dpkg -i mozjpeg_*.deb
+sudo ln -s /opt/mozjpeg/bin/cjpeg /usr/bin/mozjpeg
+```
+
+
 TODO
 ----
 
